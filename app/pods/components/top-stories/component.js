@@ -20,6 +20,5 @@ export default class TopStories extends Component {
           return response.json();
         })
     );
-    console.log(this.nToLoad, this.stories);
   }
 }

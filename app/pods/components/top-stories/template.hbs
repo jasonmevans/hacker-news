@@ -1,2 +1,8 @@
 <h2>Top Stories</h2>
 <p>Showing top {{this.nToLoad}} stories</p>
+
+<ol>
+  {{#each this.stories as |story|}}
+    <TopStories::Story @id={{story}} />
+  {{/each}}
+</ol>
