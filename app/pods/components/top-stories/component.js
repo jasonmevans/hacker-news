@@ -2,7 +2,7 @@ import Component from "@ember/component";
 
 export default class TopStories extends Component {
   // component args
-  nToLoad = 10;
+  maxStories = 25;
 
   // state
   stories = [];
