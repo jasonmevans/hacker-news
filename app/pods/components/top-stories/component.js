@@ -1,4 +1,5 @@
 import Component from "@ember/component";
+import { computed } from "@ember/object";
 
 export default class TopStories extends Component {
   // component args
@@ -6,6 +7,11 @@ export default class TopStories extends Component {
 
   // state
   stories = [];
+
+  @computed("stories")
+  get maxStoryList() {
+    return this.stories.slice(0, this.maxStories);
+  }
 
   async init() {
     super.init();

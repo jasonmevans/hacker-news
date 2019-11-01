@@ -2,7 +2,7 @@
 <p>Showing top {{this.maxStories}} stories</p>
 
 <ol>
-  {{#each this.stories as |story|}}
+  {{#each this.maxStoryList as |story|}}
     <TopStories::Story @id={{story}} />
   {{/each}}
 </ol>
