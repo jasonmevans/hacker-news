@@ -6,7 +6,11 @@ export default class TopStoriesStory extends Component {
   id = null;
 
   // state
-  storyData = {};
+  loaded = false;
+
+  storyData = {
+    time: 0
+  };
 
   async init() {
     super.init();
@@ -21,6 +25,7 @@ export default class TopStoriesStory extends Component {
           return response.json();
         })
     );
+    this.set("loaded", true);
   }
 
   @computed("storyData.date")

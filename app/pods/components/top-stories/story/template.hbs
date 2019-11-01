@@ -1,5 +1,9 @@
-<li>
-  <a href={{this.storyData.url}}>
-    {{this.storyData.title}}
-  </a> ({{this.storyData.score}}) by {{this.storyData.by}} at {{this.date}}
-</li>
+{{#if this.loaded}}
+  <li>
+    <a href={{this.storyData.url}}>
+      {{this.storyData.title}}
+    </a> ({{this.storyData.score}}) by {{this.storyData.by}} at {{this.date}}
+  </li>
+{{else}}
+  Loading...
+{{/if}}
